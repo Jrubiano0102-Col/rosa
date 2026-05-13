@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cielo Rosa | Restaurante & Coctelería Premium</title>
+    <meta name="description"
+        content="Donde la coctelería se encuentra con la gastronomía en un ambiente único y sofisticado.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pink: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/logo.png" alt="Cielo Rosa" class="h-12 w-auto">
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#hero" class="text-white hover:text-pink-400 transition-colors">Inicio</a>
+                    <a href="#dishes" class="text-white hover:text-pink-400 transition-colors">Menú</a>
+                    <a href="#gallery" class="text-white hover:text-pink-400 transition-colors">Galería</a>
+                    <a href="#testimonials" class="text-white hover:text-pink-400 transition-colors">Reseñas</a>
+                    <a href="#contact" class="text-white hover:text-pink-400 transition-colors">Contacto</a>
+                    <a href="https://wa.me/573123253129?text=Hola,%20quiero%20reservar%20una%20mesa" target="_blank"
+                        class="bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition-all hover:scale-105 inline-block">
+                        Reservar
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i data-lucide="menu" size="28"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-md">
+            <div class="px-4 pt-2 pb-6 space-y-4 text-center">
+                <a href="#hero" class="block w-full text-white hover:text-pink-400 py-2">Inicio</a>
+                <a href="#dishes" class="block w-full text-white hover:text-pink-400 py-2">Menú</a>
+                <a href="#gallery" class="block w-full text-white hover:text-pink-400 py-2">Galería</a>
+                <a href="#testimonials" class="block w-full text-white hover:text-pink-400 py-2">Reseñas</a>
+                <a href="#contact" class="block w-full text-white hover:text-pink-400 py-2">Contacto</a>
+                <a href="https://wa.me/573123253129?text=Hola,%20quiero%20reservar%20una%20mesa" target="_blank"
+                    class="block w-full bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600">
+                    Reservar
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="assets/images/baner.png" alt="Cielo Rosa Interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <div class="reveal">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Cielo Rosa</h1>
+                <p class="text-2xl md:text-3xl font-semibold text-white mb-2">El mejor <span
+                        class="text-pink-500">ROOFTOP</span> al sur de Bogotá</p>
+                <p class="text-lg md:text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
+                    Donde la coctelería se encuentra con la gastronomía en un ambiente único y sofisticado.
+                </p>
+                <a href="https://maps.app.goo.gl/D9QmwhKAtZHwejkG6" target="_blank"
+                    class="text-base md:text-lg text-pink-300/80 mb-10 max-w-2xl mx-auto flex items-center justify-center gap-2 hover:text-pink-400 transition-colors group">
+                    <i data-lucide="map-pin" size="16" class="group-hover:scale-110 transition-transform"></i> Carrera
+                    79 a sur # 65 j - 42
+                </a>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="https://wa.me/573123253129?text=Hola,%20quiero%20reservar%20una%20mesa" target="_blank"
+                        class="bg-pink-500 text-white px-8 py-4 rounded-full hover:bg-pink-600 transition-all hover:scale-105 shadow-lg shadow-pink-500/50 inline-block font-bold">
+                        Reservar Mesa
+                    </a>
+                    <a href="https://drive.google.com/file/d/1-svmeFHAhmVFtTS2D8lXfbjwsVdaX3Ro/view" target="_blank"
+                        class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full hover:bg-white/20 transition-all border border-white/30 font-bold inline-block text-center">
+                        Ver Menú
+                    </a>
+                </div>
+
+                <!-- Removed Quick Info Cards -->
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div class="w-6 h-10 border-2 border-pink-400 rounded-full flex justify-center animate-bounce">
+                <div class="w-1 h-3 bg-pink-400 rounded-full mt-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dishes Section -->
+    <section id="dishes" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Platos Destacados</h2>
+                <div class="w-24 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Experiencias culinarias únicas creadas por nuestro chef especializado
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+                <!-- Dish 1 -->
+                <div class="group reveal cursor-pointer menu-item" style="transition-delay: 100ms;">
+                    <div
+                        class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 shadow-lg hover:shadow-pink-500/20 h-full flex flex-col">
+                        <div class="aspect-square relative overflow-hidden">
+                            <img src="assets/images/plato_1.jpg" alt="Dulce Pecado del Mar"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span
+                                class="text-pink-400 text-xs font-semibold uppercase tracking-wider">Especialidad</span>
+                            <h3 class="text-white text-xl font-bold mt-2 mb-3">Dulce Pecado del Mar 🦐</h3>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">Plátano maduro bañado en salsa marinera,
+                                camarones salteados y queso mozzarella fundido</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-pink-400 text-2xl font-bold price-tag">$$$</span>
+                                <a href="https://wa.me/573123253129?text=Hola,%20estoy%20interesado%20en%20el%20producto:%20Dulce%20Pecado%20del%20Mar"
+                                    target="_blank"
+                                    class="bg-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-all inline-block">Ordenar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dish 2 -->
+                <div class="group reveal cursor-pointer menu-item" style="transition-delay: 200ms;">
+                    <div
+                        class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 shadow-lg hover:shadow-pink-500/20 h-full flex flex-col">
+                        <div class="aspect-square relative overflow-hidden">
+                            <img src="assets/images/plato 2.jpg" alt="Filet Mignon"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-pink-400 text-xs font-semibold uppercase tracking-wider">Plato
+                                Principal</span>
+                            <h3 class="text-white text-xl font-bold mt-2 mb-3">Filet Mignon Premium</h3>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">Corte premium con reducción de vino tinto
+                                y papas gratinadas</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-pink-400 text-2xl font-bold price-tag">$$$</span>
+                                <a href="https://wa.me/573123253129?text=Hola,%20estoy%20interesado%20en%20el%20producto:%20Filet%20Mignon%20Premium"
+                                    target="_blank"
+                                    class="bg-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-all inline-block">Ordenar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dish 3 -->
+                <div class="group reveal cursor-pointer menu-item" style="transition-delay: 300ms;">
+                    <div
+                        class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 shadow-lg hover:shadow-pink-500/20 h-full flex flex-col">
+                        <div class="aspect-square relative overflow-hidden">
+                            <img src="assets/images/plato 3.jpg" alt="Salmón"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-pink-400 text-xs font-semibold uppercase tracking-wider">Plato
+                                Principal</span>
+                            <h3 class="text-white text-xl font-bold mt-2 mb-3">Pechuga de pollo</h3>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">acompañada de champiñones en una salsa
+                                cremosa que resalta cada matiz del
+                                plato.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-pink-400 text-2xl font-bold price-tag">$$$</span>
+                                <a href="https://wa.me/573123253129?text=Hola,%20estoy%20interesado%20en%20el%20producto:%20Pechuga%20de%20pollo"
+                                    target="_blank"
+                                    class="bg-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-all inline-block">Ordenar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dish 4 -->
+                <div class="group reveal cursor-pointer menu-item" style="transition-delay: 400ms;">
+                    <div
+                        class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 shadow-lg hover:shadow-pink-500/20 h-full flex flex-col">
+                        <div class="aspect-square relative overflow-hidden">
+                            <img src="assets/images/plato 4.jpg" alt="Risotto"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-pink-400 text-xs font-semibold uppercase tracking-wider">Plato
+                                Principal</span>
+                            <h3 class="text-white text-xl font-bold mt-2 mb-3">Una mezcla que enamora 🤤✨</h3>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">Jugosa proteína a la plancha, cubierta
+                                con queso derretido, chorizo, maíz dulce</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-pink-400 text-2xl font-bold price-tag">$$$</span>
+                                <a href="https://wa.me/573123253129?text=Hola,%20estoy%20interesado%20en%20una%20mezcla%20que%20enamora"
+                                    target="_blank"
+                                    class="bg-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-all inline-block">Ordenar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cocktails Section -->
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Coctelería Premium</h2>
+                <div class="w-24 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Bebidas especiales creadas por nuestros mixólogos expertos
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cocktail 1 -->
+                <div class="group reveal cursor-pointer menu-item" style="transition-delay: 100ms;">
+                    <div
+                        class="bg-gradient-to-br from-pink-900/20 to-gray-900 rounded-2xl overflow-hidden border border-pink-500/30 hover:border-pink-500/60 transition-all duration-300 shadow-lg hover:shadow-pink-500/30 h-full flex flex-col">
+                        <div class="aspect-square relative overflow-hidden">
+                            <img src="assets/images/coctel.jpg" alt="Pink Paradise"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-pink-400 text-xs font-semibold uppercase tracking-wider">Coctelería</span>
+                            <h3 class="text-white text-xl font-bold mt-2 mb-3">Pink Paradise</h3>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">Vodka premium, frutos rojos y un toque de
+                                champagne rosado</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-pink-400 text-2xl font-bold price-tag">$$$</span>
+                                <a href="https://wa.me/573123253129?text=Hola,%20estoy%20interesado%20en%20el%20producto:%20Pink%20Paradise"
+                                    target="_blank"
+                                    class="bg-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-all inline-block">Ordenar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cocktail 2 -->
+                <div class="group reveal cursor-pointer menu-item" style="transition-delay: 200ms;">
+                    <div
+                        class="bg-gradient-to-br from-pink-900/20 to-gray-900 rounded-2xl overflow-hidden border border-pink-500/30 hover:border-pink-500/60 transition-all duration-300 shadow-lg hover:shadow-pink-500/30 h-full flex flex-col">
+                        <div class="aspect-square relative overflow-hidden">
+                            <img src="assets/images/rosa_salvaje.jpg" alt="Cielo Sunset"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-pink-400 text-xs font-semibold uppercase tracking-wider">Coctelería</span>
+                            <h3 class="text-white text-xl font-bold mt-2 mb-3">Cielo Sunset</h3>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">Tequila reposado, maracuyá, jengibre y
+                                bitter aromático</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-pink-400 text-2xl font-bold price-tag">$$$</span>
+                                <a href="https://wa.me/573123253129?text=Hola,%20estoy%20interesado%20en%20el%20producto:%20Cielo%20Sunset"
+                                    target="_blank"
+                                    class="bg-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-all inline-block">Ordenar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cocktail 3 -->
+                <div class="group reveal cursor-pointer menu-item" style="transition-delay: 300ms;">
+                    <div
+                        class="bg-gradient-to-br from-pink-900/20 to-gray-900 rounded-2xl overflow-hidden border border-pink-500/30 hover:border-pink-500/60 transition-all duration-300 shadow-lg hover:shadow-pink-500/30 h-full flex flex-col">
+                        <div class="aspect-square relative overflow-hidden">
+                            <img src="assets/images/coctel_verde.jpg" alt="Rosa Negroni"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-pink-400 text-xs font-semibold uppercase tracking-wider">Coctelería</span>
+                            <h3 class="text-white text-xl font-bold mt-2 mb-3">Rosa Negroni</h3>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">Refrescante, llena de sabor e ideal para
+                                cada momento</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-pink-400 text-2xl font-bold price-tag">$$$</span>
+                                <a href="https://wa.me/573123253129?text=Hola,%20estoy%20interesado%20en%20el%20producto:%20Rosa%20Negroni"
+                                    target="_blank"
+                                    class="bg-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-all inline-block">Ordenar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cocktail 4 -->
+                <div class="group reveal cursor-pointer menu-item" style="transition-delay: 400ms;">
+                    <div
+                        class="bg-gradient-to-br from-pink-900/20 to-gray-900 rounded-2xl overflow-hidden border border-pink-500/30 hover:border-pink-500/60 transition-all duration-300 shadow-lg hover:shadow-pink-500/30 h-full flex flex-col">
+                        <div class="aspect-square relative overflow-hidden">
+                            <img src="assets/images/bebida_azul.jpg" alt="Velvet Martini"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-pink-400 text-xs font-semibold uppercase tracking-wider">Coctelería</span>
+                            <h3 class="text-white text-xl font-bold mt-2 mb-3">Un detalle azul que enamora ✨🌸</h3>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">Vodka, licor de rosas y espuma de
+                                violetas</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-pink-400 text-2xl font-bold price-tag">$$$</span>
+                                <a href="https://wa.me/573123253129?text=Hola,%20estoy%20interesado%20en%20un%20detalle%20azul%20que%20enamora"
+                                    target="_blank"
+                                    class="bg-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-sm hover:bg-pink-500 hover:text-white transition-all inline-block">Ordenar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-black relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">¿Por Qué Elegirnos?</h2>
+                <div class="w-24 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">Comprometidos con la excelencia en cada detalle</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Benefit 1 -->
+                <div class="group reveal w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]">
+                    <div
+                        class="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 h-full">
+                        <div
+                            class="bg-pink-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-all">
+                            <i data-lucide="leaf" class="text-pink-400 group-hover:scale-110 transition-transform"
+                                size={32}></i>
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-3">Ingredientes Frescos</h3>
+                        <p class="text-gray-400">Productos seleccionados diariamente de proveedores locales</p>
+                    </div>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="group reveal w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 h-full">
+                        <div
+                            class="bg-pink-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-all">
+                            <i data-lucide="chef-hat" class="text-pink-400 group-hover:scale-110 transition-transform"
+                                size={32}></i>
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-3">Chef Especializado</h3>
+                        <p class="text-gray-400">Equipo culinario con más de 15 años de experiencia</p>
+                    </div>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="group reveal w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 h-full">
+                        <div
+                            class="bg-pink-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-all">
+                            <i data-lucide="sparkles" class="text-pink-400 group-hover:scale-110 transition-transform"
+                                size={32}></i>
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-3">Ambiente Premium</h3>
+                        <p class="text-gray-400">Diseño único y atmósfera sofisticada para momentos especiales</p>
+                    </div>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="group reveal w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
+                    style="transition-delay: 300ms;">
+                    <div
+                        class="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 h-full">
+                        <div
+                            class="bg-pink-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-all">
+                            <i data-lucide="award" class="text-pink-400 group-hover:scale-110 transition-transform"
+                                size={32}></i>
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-3">Coctelería Artesanal</h3>
+                        <p class="text-gray-400">Mixología premium con bebidas exclusivas de autor</p>
+                    </div>
+                </div>
+                <!-- Benefit 5 -->
+                <div class="group reveal w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
+                    style="transition-delay: 400ms;">
+                    <div
+                        class="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 h-full">
+                        <div
+                            class="bg-pink-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition-all">
+                            <i data-lucide="clock" class="text-pink-400 group-hover:scale-110 transition-transform"
+                                size={32}></i>
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-3">Abierto 7 Días</h3>
+                        <p class="text-gray-400">Disfruta de nuestra experiencia todos los días de la semana</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Galería</h2>
+                <div class="w-24 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">Un vistazo a nuestro ambiente único y sofisticado</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                <!-- Item 1: Large Featured -->
+                <div class="col-span-2 row-span-2 relative overflow-hidden rounded-2xl group cursor-pointer reveal">
+                    <img src="assets/images/interior.jpg" alt="Interior Premium"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <p class="text-white font-semibold text-lg text-center">Interior del restaurante</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="col-span-1 row-span-1 relative overflow-hidden rounded-2xl group cursor-pointer reveal"
+                    style="transition-delay: 100ms;">
+                    <img src="assets/images/galeria.jpg" alt="Mixología"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <p class="text-white font-semibold text-sm text-center">Bar de cocteles</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="col-span-1 row-span-1 relative overflow-hidden rounded-2xl group cursor-pointer reveal"
+                    style="transition-delay: 200ms;">
+                    <img src="assets/images/terrasa.jpg" alt="Gastronomía"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <p class="text-white font-semibold text-sm text-center">Terraza</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="col-span-1 row-span-1 relative overflow-hidden rounded-2xl group cursor-pointer reveal"
+                    style="transition-delay: 300ms;">
+                    <img src="assets/images/mesa.jpg" alt="Cena Romántica"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <p class="text-white font-semibold text-sm text-center">Mesa decorada</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="col-span-1 row-span-1 relative overflow-hidden rounded-2xl group cursor-pointer reveal"
+                    style="transition-delay: 400ms;">
+                    <img src="assets/images/nocturno.jpg" alt="Eventos Especiales"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <p class="text-white font-semibold text-sm text-center">Ambiente nocturno</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-black relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Lo Que Dicen Nuestros Clientes</h2>
+                <div class="w-24 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <div class="flex items-center justify-center gap-2 text-pink-400">
+                    <i data-lucide="star" fill="currentColor" size="24"></i>
+                    <span class="text-2xl font-bold">4.5</span>
+                    <span class="text-gray-400">en Google Maps (250 reseñas)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <a href="https://maps.app.goo.gl/D9QmwhKAtZHwejkG6" target="_blank" class="group reveal block">
+                    <div
+                        class="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-pink-500/30 transition-all duration-300 h-full relative">
+                        <i data-lucide="quote"
+                            class="absolute top-4 right-4 text-pink-500/20 group-hover:text-pink-500/30 transition-colors"
+                            size="40"></i>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-lg font-bold">
+                                DA</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Deybi Arvey</h4>
+                                <div class="flex gap-1 text-pink-400">
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 leading-relaxed italic">"Excelente lugar un ambiente agradable una
+                            muy buena atención la comida exquisita y el coctel de la casa muy recomendado se paso un
+                            momento agradable"</p>
+                        <div class="flex items-center gap-2 mt-auto">
+                            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                                alt="Google" class="h-3 opacity-50">
+                            <p class="text-gray-500 text-xs">Hace 1 semana</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Testimonial 2 -->
+                <a href="https://maps.app.goo.gl/D9QmwhKAtZHwejkG6" target="_blank" class="group reveal block"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-pink-500/30 transition-all duration-300 h-full relative">
+                        <i data-lucide="quote"
+                            class="absolute top-4 right-4 text-pink-500/20 group-hover:text-pink-500/30 transition-colors"
+                            size="40"></i>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-lg font-bold">
+                                LR</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Leidy Lorena Rubiano</h4>
+                                <div class="flex gap-1 text-pink-400">
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 leading-relaxed italic">"Muy rica la comida, me celebraron el
+                            cumpleaños y Alejandra me atendió súper bien desde el Inicio hasta el final, encantada!!!"
+                        </p>
+                        <div class="flex items-center gap-2 mt-auto">
+                            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                                alt="Google" class="h-3 opacity-50">
+                            <p class="text-gray-500 text-xs">Hace 3 meses</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Testimonial 3 -->
+                <a href="https://maps.app.goo.gl/D9QmwhKAtZHwejkG6" target="_blank" class="group reveal block"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-pink-500/30 transition-all duration-300 h-full relative">
+                        <i data-lucide="quote"
+                            class="absolute top-4 right-4 text-pink-500/20 group-hover:text-pink-500/30 transition-colors"
+                            size="40"></i>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-lg font-bold">
+                                JG</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Jorge Luis Garavito</h4>
+                                <div class="flex gap-1 text-pink-400">
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 leading-relaxed italic">"Fuí con mi novia y nos encantó el lugar.
+                            Desde que llegamos el ambiente fue acogedor y la buena atención se notó al instante. Que
+                            buena comida, y que buena música."</p>
+                        <div class="flex items-center gap-2 mt-auto">
+                            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                                alt="Google" class="h-3 opacity-50">
+                            <p class="text-gray-500 text-xs">Hace 7 meses</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Testimonial 4 -->
+                <a href="https://maps.app.goo.gl/D9QmwhKAtZHwejkG6" target="_blank" class="group reveal block"
+                    style="transition-delay: 300ms;">
+                    <div
+                        class="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-pink-500/30 transition-all duration-300 h-full relative">
+                        <i data-lucide="quote"
+                            class="absolute top-4 right-4 text-pink-500/20 group-hover:text-pink-500/30 transition-colors"
+                            size="40"></i>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-lg font-bold">
+                                M</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Maribel</h4>
+                                <div class="flex gap-1 text-pink-400">
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 leading-relaxed italic">"Comida rica muy bien atendidos no solo por
+                            un mesero por varios lo que gusto porque todos están atentos decoración linda música me
+                            parece full para recomendar"</p>
+                        <div class="flex items-center gap-2 mt-auto">
+                            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                                alt="Google" class="h-3 opacity-50">
+                            <p class="text-gray-500 text-xs">Hace 3 meses</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Testimonial 5 -->
+                <a href="https://maps.app.goo.gl/D9QmwhKAtZHwejkG6" target="_blank" class="group reveal block"
+                    style="transition-delay: 400ms;">
+                    <div
+                        class="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-pink-500/30 transition-all duration-300 h-full relative">
+                        <i data-lucide="quote"
+                            class="absolute top-4 right-4 text-pink-500/20 group-hover:text-pink-500/30 transition-colors"
+                            size="40"></i>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-lg font-bold">
+                                LE</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Lufan Estupiñan</h4>
+                                <div class="flex gap-1 text-pink-400">
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 leading-relaxed italic">"El menú excelente variado y el servicio
+                            bueno. El lugar amplió y muy elegante, los platos súper recomendados."</p>
+                        <div class="flex items-center gap-2 mt-auto">
+                            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                                alt="Google" class="h-3 opacity-50">
+                            <p class="text-gray-500 text-xs">Hace 4 meses</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Testimonial 6 -->
+                <a href="https://maps.app.goo.gl/D9QmwhKAtZHwejkG6" target="_blank" class="group reveal block"
+                    style="transition-delay: 500ms;">
+                    <div
+                        class="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-pink-500/30 transition-all duration-300 h-full relative">
+                        <i data-lucide="quote"
+                            class="absolute top-4 right-4 text-pink-500/20 group-hover:text-pink-500/30 transition-colors"
+                            size="40"></i>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-lg font-bold">
+                                DL</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Deissy Leguizamón</h4>
+                                <div class="flex gap-1 text-pink-400">
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                    <i data-lucide="star" size="14" fill="currentColor"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 leading-relaxed italic">"Un lugar amplió y muy elegante, la
+                            atención es muy buena y hoy tuvimos el placer de que nos atendiera Alejandra."</p>
+                        <div class="flex items-center gap-2 mt-auto">
+                            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                                alt="Google" class="h-3 opacity-50">
+                            <p class="text-gray-500 text-xs">Hace 3 meses</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 bg-gradient-to-br from-pink-900 via-black to-black relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMzYsMTI1LDE2NSwwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30">
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="reveal">
+                <h2 class="text-5xl md:text-6xl font-bold text-white mb-6">¿Listo para una Experiencia Inolvidable?</h2>
+                <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">Reserva tu mesa ahora y descubre por qué somos
+                    el restaurante favorito de la ciudad</p>
+
+                <div class="flex justify-center">
+                    <a href="https://wa.me/573123253129?text=Hola,%20quiero%20reservar%20una%20mesa" target="_blank"
+                        class="bg-pink-500 text-white px-10 py-5 rounded-full text-lg font-semibold hover:bg-pink-600 transition-all shadow-2xl shadow-pink-500/50 flex items-center justify-center gap-3">
+                        <i data-lucide="calendar" size="24"></i>
+                        Reservar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Ubicación y Contacto</h2>
+                <div class="w-24 h-1 bg-pink-500 mx-auto mb-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Map -->
+                <div class="rounded-2xl overflow-hidden border border-pink-500/20 h-[400px] reveal">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.937748450122!2d-74.19026962402127!3d4.6051708953696615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9fe24916434d%3A0xba14e18a4556f866!2sCielo%20rosa%20rooftop!5e0!3m2!1ses-419!2sco!4v1715576735123!5m2!1ses-419!2sco"
+                        width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+                        class="grayscale hover:grayscale-0 transition-all duration-500"></iframe>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-6 reveal">
+                    <div class="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-6 border border-pink-500/20">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-pink-500/10 p-3 rounded-full"><i data-lucide="map-pin" class="text-pink-400"
+                                    size="24"></i></div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg mb-2">Dirección</h3>
+                                <p class="text-gray-400">Carrera 79 a sur # 65 j - 42</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-6 border border-pink-500/20">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-pink-500/10 p-3 rounded-full"><i data-lucide="clock" class="text-pink-400"
+                                    size="24"></i></div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg mb-2">Horarios</h3>
+                                <p class="text-gray-400">
+                                    Lun - Jue: 4:00 PM - 11:00 PM<br>
+                                    Vie: 4:00 PM - 1:00 AM<br>
+                                    Sab: 1:00 PM - 1:00 AM<br>
+                                    Dom: 1:00 PM - 8:00 PM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-6 border border-pink-500/20">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-pink-500/10 p-3 rounded-full"><i data-lucide="credit-card"
+                                    class="text-pink-400" size="24"></i></div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg mb-2">Métodos de Pago</h3>
+                                <p class="text-gray-400">Efectivo, Tarjetas de Crédito/Débito<br>Transferencias, Nequi
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-pink-500/20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="assets/images/logo.png" alt="Cielo Rosa" class="h-16 mb-4">
+                    <p class="text-gray-400 max-w-md">Experiencia gastronómica única donde la coctelería premium se
+                        encuentra con sabores excepcionales.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#hero" class="text-gray-400 hover:text-pink-400 transition-colors">Inicio</a></li>
+                        <li><a href="#dishes" class="text-gray-400 hover:text-pink-400 transition-colors">Menú</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-pink-400 transition-colors">Galería</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-pink-400 transition-colors">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-4">Síguenos</h3>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/cielorosarooftop" target="_blank"
+                            class="bg-white/5 p-3 rounded-full hover:bg-white/10 transition-all group flex items-center justify-center w-12 h-12">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                                alt="Instagram" class="w-6 h-6 grayscale group-hover:grayscale-0 transition-all">
+                        </a>
+                        <a href="https://wa.me/573123253129" target="_blank"
+                            class="bg-white/5 p-3 rounded-full hover:bg-white/10 transition-all group flex items-center justify-center w-12 h-12">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                                class="w-6 h-6 grayscale group-hover:grayscale-0 transition-all">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-pink-500/10 pt-8 text-center">
+                <p class="text-gray-400 text-sm">© <span id="year"></span> Cielo Rosa. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-[90]">
+        <a href="https://www.instagram.com/cielorosarooftop" target="_blank"
+            class="bg-gradient-to-tr from-purple-600 via-pink-500 to-yellow-500 text-white w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group relative">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+                class="w-6 h-6 md:w-7 md:h-7">
+            <span
+                class="absolute right-full mr-4 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap top-1/2 -translate-y-1/2 backdrop-blur-sm border border-white/10 hidden md:block">Instagram</span>
+        </a>
+        <a href="https://wa.me/573123253129" target="_blank"
+            class="bg-[#25D366] text-white w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group relative">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                class="w-7 h-7 md:w-8 md:h-8">
+            <span
+                class="absolute right-full mr-4 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap top-1/2 -translate-y-1/2 backdrop-blur-sm border border-white/10 hidden md:block">WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Lightbox Modal (Gallery) -->
+    <div id="lightbox"
+        class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-10 cursor-zoom-out">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white hover:text-pink-500 transition-colors">
+            <i data-lucide="x" size="40"></i>
+        </button>
+        <div class="max-w-5xl w-full max-h-[90vh] flex items-center justify-center">
+            <img id="lightbox-img" src="" alt="Enlarged Image"
+                class="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl shadow-pink-500/20 animate-in fade-in zoom-in duration-300">
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div id="product-modal"
+        class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-xl flex items-center justify-center p-2 md:p-4">
+        <div
+            class="bg-gray-900 border border-white/10 rounded-3xl max-w-4xl w-full overflow-y-auto md:overflow-hidden max-h-[95vh] md:max-h-none shadow-2xl relative animate-in fade-in zoom-in duration-300">
+
+            <button id="close-product-modal"
+                class="absolute top-4 right-4 z-20 bg-black/50 p-2 rounded-full text-white hover:text-pink-500 transition-colors backdrop-blur-md">
+                <i data-lucide="x" size="24"></i>
+            </button>
+
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <!-- Image Side -->
+                <div
+                    class="h-[300px] sm:h-[350px] md:h-[500px] relative overflow-hidden bg-black/40 flex items-center justify-center">
+                    <img id="modal-product-img" src="" alt="Product" class="w-full h-full object-contain relative z-10">
+                    <div id="modal-product-bg"
+                        class="absolute inset-0 bg-cover bg-center blur-2xl opacity-30 scale-110"></div>
+                </div>
+
+                <!-- Info Side -->
+                <div class="p-8 md:p-12 flex flex-col justify-center">
+                    <span id="modal-product-category"
+                        class="text-pink-400 text-sm font-semibold uppercase tracking-widest mb-2 block"></span>
+                    <h2 id="modal-product-name" class="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                    </h2>
+                    <p id="modal-product-description" class="text-gray-400 text-lg mb-8 leading-relaxed"></p>
+
+                    <div class="flex items-center justify-between mt-auto pt-6 border-t border-white/5">
+                        <div>
+                            <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Precio</p>
+                            <span id="modal-product-price" class="text-pink-400 text-3xl font-bold"></span>
+                        </div>
+                        <a id="modal-product-order" href="" target="_blank"
+                            class="bg-pink-500 text-white px-8 py-4 rounded-full font-bold hover:bg-pink-600 transition-all shadow-xl shadow-pink-500/20 flex items-center gap-2">
+                            <i data-lucide="message-circle" size="20"></i>
+                            Ordenar Ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
